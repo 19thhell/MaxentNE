@@ -27,4 +27,4 @@ In CIMS server terminal, run the following command:
 
 ```python maxent.py```
 
-The script will read in the language and test set from STDIN, then train the NER and produce statistics base on the language and test set you choose. The whole process takes about 45 minutes.
+The script will read in the choice of language and test set from STDIN, then train the NER and produce statistics base on the language and test set you choose. The whole process takes about 45 minutes.
