@@ -1,0 +1,41 @@
+\begin{thebibliography}{1}\itemsep=-1pt
+
+\bibitem{BirdKleinLoper09}
+S.~Bird, E.~Klein, and E.~Loper.
+\newblock {\em {Natural Language Processing with Python}}.
+\newblock O'Reilly Media, 2009.
+
+\bibitem{Megam}
+H.~D. III.
+\newblock Notes on cg and lm-bfgs optimization of logistic regression.
+\newblock 2004.
+\newblock http://www.umiacs.umd.edu/~hal/docs/daume04cg-bfgs.pdf.
+
+\bibitem{Malouf}
+R.~Malouf.
+\newblock Markov models for language-independent named entity recognition.
+\newblock {\em Proceedings of CoNLL-2002}, pages 187--190, 2002.
+
+\bibitem{Global}
+X.~Mao, W.~Xu, Y.~Dong, S.~He, and H.~Wang.
+\newblock Using non-local features to improve named entity recognition recall.
+\newblock {\em The 21st Pacific Asia Conference on Language, Information and
+  Computation : Proceedings}, 21, 2007.
+
+\bibitem{Survey}
+D.~Nadeau and S.~Sekine.
+\newblock A survey of named entity recognition and classification.
+\newblock {\em Lingvisticae Investigationes}, 30(1):3--26, 2007.
+
+\bibitem{Tjong}
+E.~F. T.~K. Sang.
+\newblock Introduction to the conll-2002 shared task: Language-independent
+  named entity recognition.
+\newblock {\em Proceedings of CoNLL-2002}, pages 155--158, 2002.
+
+\bibitem{Explore}
+M.~Tkachenko and A.~Simanovsky.
+\newblock Named entity recognition: Exploring features.
+\newblock {\em Proceedings of KONVENS 2012}, 2012.
+
+\end{thebibliography}

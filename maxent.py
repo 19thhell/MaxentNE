@@ -15,12 +15,12 @@ def generate_feature(data, prev, next, position, sentence_length, stemmer):
 	next_stem = stemmer.stem(next_word)
 	#feature['UPPER'] = word.upper()
 	#feature['LOWER'] = word.lower()
-	#feature['position'] = position
 	feature['WORD'] = word
 	feature['POS'] = pos
 	feature['STEM'] = stem
 	feature['PREVWORD'] = prev_word
 	feature['PREVPOS'] = prev_pos
+	feature['PREVTAG'] = prev_tag
 	feature['PREVSTEM'] = prev_stem
 	feature['NEXTWORD'] = next_word
 	feature['NEXTPOS'] = next_pos
@@ -52,12 +52,12 @@ def generate_feature(data, prev, next, position, sentence_length, stemmer):
 	feature['LAST1'] = ''
 	if len(word) >= 1:
 		feature['LAST1'] = word[-1 : ]
-	#feature['PREVPOS+POS'] = prev_pos + pos
-	#feature['POS+NEXTPOS'] = pos + next_pos
 	feature['PREVPOS+POS+NEXTPOS'] = prev_pos + pos + next_pos
 	feature['TITLE'] = word.istitle()
-	feature['PREVTITLE+TITLE+NEXTTITLE'] = prev_word.istitle() and word.istitle() and next_word.istitle()
 	feature['PREVTITLE+NEXTTITLE+POS'] = str(prev_word.istitle() and next_word.istitle()) + pos
+	#feature['TITLE+NEXTTITLE'] = word.istitle() and next_word.istitle()
+	#feature['NEXTTITLE'] = next_word.istitle()
+	#feature['TITLE|UPPER'] = word.istitle() or word.isupper()
 	feature['WORDLEN'] = len(word)
 	return feature
 
@@ -74,8 +74,6 @@ def predict(maxent, test_set):
 	for sample in test_set:
 		feature, label = sample
 		#Use previous prediction as previous tag feature for test set
-		if 'POS+PREVTAG' in feature:
-			feature['POS+PREVTAG'] = feature['POS'] + prev_pred
 		feature['PREVTAG'] = prev_pred
 		probs = maxent.prob_classify(feature)
 		prev_pred = probs.max()
